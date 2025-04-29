@@ -1,0 +1,8 @@
+tasks:
+  - init: npm install
+  - command: ng serve --host 0.0.0.0
+  - command: npx cypress run
+
+ports:
+  - port: 4200
+    onOpen: open-preview
