@@ -1,6 +1,6 @@
 FROM gitpod/workspace-full
 
-# Install system dependencies required for Cypress
+# Update package list and install system dependencies required for Cypress
 RUN sudo apt-get update && \
     sudo apt-get install -y \
     libgtk2.0-0 \
@@ -13,7 +13,21 @@ RUN sudo apt-get update && \
     libasound2 \
     libxtst6 \
     xauth \
-    xvfb
+    xvfb \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libcups2 \
+    libdrm2 \
+    libxkbcommon0 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxfixes3 \
+    libxrandr2 \
+    libgbm1 \
+    libpango-1.0-0 \
+    libcairo2 \
+    libatspi2.0-0 \
+    libx11-xcb1
 
 # Verify Xvfb installation
 RUN which Xvfb
