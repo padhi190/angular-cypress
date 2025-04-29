@@ -1,5 +1,6 @@
 tasks:
   - init: npm install
+  - command: Xvfb :99 -screen 0 1280x1024x24 &
   - command: ng serve --host 0.0.0.0
   - command: npx cypress run
 

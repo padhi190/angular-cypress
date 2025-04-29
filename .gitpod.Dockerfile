@@ -15,6 +15,9 @@ RUN sudo apt-get update && \
     xauth \
     xvfb
 
+# Verify Xvfb installation
+RUN which Xvfb
+
 # Install Cypress
 RUN npm install -g cypress
 
