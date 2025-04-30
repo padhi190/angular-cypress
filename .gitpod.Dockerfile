@@ -1,1 +1,1 @@
-FROM https://hub.docker.com/r/cypress/included/tags
+FROM cypress/included:14.3.2
