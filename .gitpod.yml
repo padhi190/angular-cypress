@@ -2,9 +2,27 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: npm install
-  - command: ng serve --host 0.0.0.0
-  - command: npx cypress run
+  - name: Angular & Cypress Setup
+    init: |
+      echo "Starting Prebuild..."
+      npm install 
+      echo "Prebuild finished."
+    command: |
+      echo "Starting Workspace..."
+      echo "Running ng serve in $(pwd)..."
+
+      npx ng serve --host 0.0.0.0 --disable-host-check &
+
+      gp ports await 4200
+      echo "Angular development server is running on port 4200."
+      echo "=========================================================="
+      echo "To open the Cypress Test Runner, run this in a NEW terminal:"
+
+      echo "npm run cypress:run"
+      echo "or"
+      echo "npx cypress run"
+      echo "=========================================================="
+      # gp sync-done setup
 
 ports:
   - port: 4200
