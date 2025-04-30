@@ -1,59 +1,67 @@
 # AngularCypress
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+This repository contains an Angular project configured with Cypress for end-to-end testing, specifically set up to be used in Gitpod.
 
-## Development server
+## Quick Start with Gitpod
 
-To start a local development server, run:
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/padhi190/angular-cypress)
 
-```bash
-ng serve
-```
+Clicking the button above will start a new Gitpod workspace with everything pre-configured. The workspace will:
+1. Automatically install all dependencies
+2. Start the Angular development server
+3. Set up Cypress for testing
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Development Environment
 
-## Code scaffolding
+Once the Gitpod workspace is ready:
+- The Angular application will be running at port 4200
+- A preview window will automatically open showing the running application
+- All necessary development tools will be pre-installed
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Running Tests
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+This project uses Cypress for end-to-end testing. To run the tests:
 
 ```bash
-ng build
+# Run Cypress tests in headless mode
+npm run cypress:run
+
+or
+
+npx cypress run
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Project Structure
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+angular-cypress/
+├── src/                  # Angular application source code
+├── cypress/             
+│   ├── e2e/             # Cypress test files
+│   ├── fixtures/        # Test data
+│   └── support/         # Test support files
+└── ...
 ```
 
-## Running end-to-end tests
+## Available Commands
 
-For end-to-end (e2e) testing, run:
+- `npm start` - Start the development server
+- `npm run cypress:run` - Run Cypress tests in headless mode
 
-```bash
-ng e2e
-```
+## Technical Stack
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Angular 19.2.0
+- Cypress 14.3.2 
+
+## Need Help?
+
+If you encounter any issues:
+1. Check the terminal output for any error messages
+2. Ensure all services are running (Angular server, Cypress)
+3. Review the Gitpod logs for any initialization issues
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular Documentation](https://angular.dev)
+- [Cypress Documentation](https://docs.cypress.io)
+- [Gitpod Documentation](https://www.gitpod.io/docs)
