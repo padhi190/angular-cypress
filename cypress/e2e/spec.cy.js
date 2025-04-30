@@ -2,7 +2,7 @@ describe('My First Test', () => {
   it('Visits the Kitchen Sink', () => {
     cy.visit('https://example.cypress.io')
   }),
-  it('Finds the content "type"', () => {
+  it('Failed the test', () => {
     expect(true).to.equal(false)
   })
 })
